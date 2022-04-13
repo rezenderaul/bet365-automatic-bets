@@ -1,0 +1,10 @@
+{
+  "name": "bet365",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Raul Cristiano Rezende <raulcristianorezende@outlook.com.br>",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^13.5.2"
+  }
+}
