@@ -40,15 +40,20 @@ const puppeteer = require('puppeteer');
 
     // all matches
     const allMatches = await page.evaluate(() => {
-        const nodeList =  document.querySelectorAll('.ovm-FixtureDetailsTwoWay.ovm-FixtureDetailsTwoWay-1');
-        const matchesArray = [...nodeList];
+        const matchesRaw =  document.querySelectorAll('.ovm-FixtureDetailsTwoWay.ovm-FixtureDetailsTwoWay-1');
+        const matchesArray = [...matchesRaw];
         const teamsAndTime = matchesArray
             .map( ({outerText}) => ({ outerText }))
             .map(match => match.outerText.split('\n'));
         
-        const goals = nodeList;
+        const resultsRaw = document.querySelectorAll(".ovm-StandardScores_StatsPointsWrapper");
+        const resultsArray = [...resultsRaw]
 
-        const statistics = nodeList;
+        const resultsList = resultsArray
+            .map( ({outerText}) => ({outerText}))
+            .map(result => result.split('\n'));
+
+        const statistics = matchesArray;
     });
 
     console.log(allMatches);
