@@ -3,12 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Raul Cristiano Rezende <raulcristianorezende@outlook.com.br>",
-<<<<<<< HEAD
   "license": "MIT",
   "dependencies": {
     "puppeteer": "^13.5.2"
   }
-=======
-  "license": "MIT"
->>>>>>> 704a7b46a077251dc5343331402023dc128fb3d6
 }
